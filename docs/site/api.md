@@ -1,10 +1,10 @@
 # API
 
-The DMOJ supports a simple JSON API for accessing most data used by the backend. Access to the API makes use of API tokens.
+The CodeTour25 supports a simple JSON API for accessing most data used by the backend. Access to the API makes use of API tokens.
 
 ## API tokens
 
-The DMOJ supports API tokens for accessing the majority of the site as your native user. The admin portion of the site is left intentionally inaccessible with these tokens. You may generate an API token on your *Edit profile* page. To use, include the following header with every request where `<API Token>` is your API token:
+The CodeTour25 supports API tokens for accessing the majority of the site as your native user. To use, include the following header with every request where `<API Token>` is your API token:
 
 ```http
 Authorization: Bearer <API Token>
@@ -23,8 +23,6 @@ The following error codes may be returned by the API token authentication layer.
 **90 requests per minute**
 
 If you exceed this limit, you will be captcha'd. Captchas are automatically removed after 3 days. However, note that if you are captcha'd again within this 3 day period, the 3 day counter will reset.
-
-**Note**: This is only a feature on the [DMOJ site](https://dmoj.ca).
 
 ## Format
 
@@ -94,7 +92,7 @@ Example of list filtering: `/api/v2/problems?organization=1&organization=2&type=
 
 ### `/api/v2/contests`
 
-Example: [/api/v2/contests?tag=seasonal&tag=dmopc](https://dmoj.ca/api/v2/contests?tag=seasonal&tag=dmopc)
+Example: [/api/v2/contests?tag=seasonal&tag=dmopc](https://codetour25.oj.io.vn/api/v2/contests?tag=seasonal&tag=dmopc)
 
 #### Basic filters
 
@@ -125,7 +123,7 @@ Example: [/api/v2/contests?tag=seasonal&tag=dmopc](https://dmoj.ca/api/v2/contes
 
 ### `/api/v2/contest/<contest key>`
 
-Example: [/api/v2/contest/bts19](https://dmoj.ca/api/v2/contest/bts19)
+Example: [/api/v2/contest/bts19](https://codetour25.oj.io.vn/api/v2/contest/bts19)
 
 #### Object response
 
@@ -188,7 +186,7 @@ Example: [/api/v2/contest/bts19](https://dmoj.ca/api/v2/contest/bts19)
 
 ### `/api/v2/participations`
 
-Example: [/api/v2/participations?contest=dmopc19c6&virtual_participation_number=0&is_disqualified=True](https://dmoj.ca/api/v2/participations?contest=dmopc19c6&virtual_participation_number=0&is_disqualified=True)
+Example: [/api/v2/participations?contest=dmopc19c6&virtual_participation_number=0&is_disqualified=True](https://codetour25.oj.io.vn/api/v2/participations?contest=dmopc19c6&virtual_participation_number=0&is_disqualified=True)
 
 #### Basic filters
 
@@ -215,7 +213,7 @@ Example: [/api/v2/participations?contest=dmopc19c6&virtual_participation_number=
 
 ### `/api/v2/problems`
 
-Example: [/api/v2/problems?partial=True&type=Uncategorized](https://dmoj.ca/api/v2/problems?partial=True&type=Uncategorized)
+Example: [/api/v2/problems?partial=True&type=Uncategorized](https://codetour25.oj.io.vn/api/v2/problems?partial=True&type=Uncategorized)
 
 #### Basic filters
 
@@ -251,7 +249,7 @@ Example: [/api/v2/problems?partial=True&type=Uncategorized](https://dmoj.ca/api/
 
 ### `/api/v2/problem/<problem code>`
 
-Example: [/api/v2/problem/helloworld](https://dmoj.ca/api/v2/problem/helloworld)
+Example: [/api/v2/problem/helloworld](https://codetour25.oj.io.vn/api/v2/problem/helloworld)
 
 #### Object response
 
@@ -295,7 +293,7 @@ Example: [/api/v2/problem/helloworld](https://dmoj.ca/api/v2/problem/helloworld)
 
 ### `/api/v2/users`
 
-Example: [/api/v2/users?organization=8](https://dmoj.ca/api/v2/users?organization=8)
+Example: [/api/v2/users?organization=8](https://codetour25.oj.io.vn/api/v2/users?organization=8)
 
 #### List filters
 
@@ -319,7 +317,7 @@ Example: [/api/v2/users?organization=8](https://dmoj.ca/api/v2/users?organizatio
 
 ### `/api/v2/user/<user username>`
 
-Example: [/api/v2/user/Xyene](https://dmoj.ca/api/v2/user/Xyene)
+Example: [/api/v2/user/Xyene](https://codetour25.oj.io.vn/api/v2/user/Xyene)
 
 #### Object response
 
@@ -353,7 +351,7 @@ Example: [/api/v2/user/Xyene](https://dmoj.ca/api/v2/user/Xyene)
 
 ### `/api/v2/submissions`
 
-Example: [/api/v2/submissions?user=Ninjaclasher](https://dmoj.ca/api/v2/submissions?user=Ninjaclasher)
+Example: [/api/v2/submissions?user=Ninjaclasher](https://codetour25.oj.io.vn/api/v2/submissions?user=Ninjaclasher)
 
 #### Basic filters
 
@@ -384,7 +382,7 @@ Example: [/api/v2/submissions?user=Ninjaclasher](https://dmoj.ca/api/v2/submissi
 
 ### `/api/v2/submission/<submission id>`
 
-Example: [/api/v2/submission/1000000](https://dmoj.ca/api/v2/submission/1000000)
+Example: [/api/v2/submission/1000000](https://codetour25.oj.io.vn/api/v2/submission/1000000)
 
 #### Object response
 
@@ -442,7 +440,7 @@ Example: [/api/v2/submission/1000000](https://dmoj.ca/api/v2/submission/1000000)
 
 ### `/api/v2/organizations`
 
-Example: [/api/v2/organizations?is_open=False](https://dmoj.ca/api/v2/organizations?is_open=False)
+Example: [/api/v2/organizations?is_open=False](https://codetour25.oj.io.vn/api/v2/organizations?is_open=False)
 
 #### Basic filters
 
@@ -465,7 +463,7 @@ Example: [/api/v2/organizations?is_open=False](https://dmoj.ca/api/v2/organizati
 
 ### `/api/v2/languages`
 
-Example: [/api/v2/languages?common_name=Python](https://dmoj.ca/api/v2/languages?common_name=Python)
+Example: [/api/v2/languages?common_name=Python](https://codetour25.oj.io.vn/api/v2/languages?common_name=Python)
 
 #### Basic filters
 
@@ -491,7 +489,7 @@ Example: [/api/v2/languages?common_name=Python](https://dmoj.ca/api/v2/languages
 
 ### `/api/v2/judges`
 
-Example: [/api/v2/judges](https://dmoj.ca/api/v2/judges)
+Example: [/api/v2/judges](https://codetour25.oj.io.vn/api/v2/judges)
 
 #### Object response
 
@@ -506,3 +504,13 @@ Example: [/api/v2/judges](https://dmoj.ca/api/v2/judges)
     ]
 }
 ```
+
+## Contest Key
+
+| Contest Name                     | Contest Key |
+|----------------------------------|-------------|
+| Warm Up - Thử hệ thống thi       | warmup      |
+| Code Tour 25 - Code Challenge #1 | challenge01 |
+| Code Tour 25 - Code Challenge #2 | challenge02 |
+| Code Tour 25 - Code Challenge #3 | challenge03 |
+| Code Tour 25 - Final Round       | finalround  |
